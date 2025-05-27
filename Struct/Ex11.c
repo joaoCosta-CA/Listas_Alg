@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+//teste
 
 struct livro{
     char receita[25];
