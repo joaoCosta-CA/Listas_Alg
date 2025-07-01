@@ -66,7 +66,7 @@ int main()
         puts("1 - Nome, telefone e e-mail");
         puts("2 - Imprimir tudo");
         scanf("%d", &imp);
-        getchar(); // Limpa o '\n' restante no buffer
+        getchar(); 
 
         if (op == 1)
         {
