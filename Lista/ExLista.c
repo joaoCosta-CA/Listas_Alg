@@ -199,35 +199,26 @@ void inverter(lista *l){
 
 int main(){
     int tam;
-    int valor;
     lista *l = malloc(sizeof(lista));
-    if (!l)
-        return 1;
+    if (!l)return 1;
     iniciar(l);
 
-    puts("Digite os valores para  fila:");
-    do{
-        scanf("%d", &valor);
-        if (valor != -1){
-            endpush(l, valor);
-        }
-
-    } while (valor != -1);
+    push(l,6);
+    push(l,2);
+    push(l,1);
+    push(l,7);
+    endpush(l,30);
     exibirLista(l);
     tam = tamanho(l);
     printf("Tamanho da lista: %d\n", tam);
-
+    excluir(l,30);
     ordenarLIst(l);
     exibirLista(l);
-    int pol;
-    puts("Em qual posicao deseja colocar?");
-    scanf("%d", &pol);
-    puts("Qual  valor?");
-    scanf("%d", &valor);
-    inserirPorPosicao(l,valor,pol);
+    inserirPorPosicao(l,10,4);
     exibirLista(l);
     inverter(l);
     exibirLista(l);
+    reiniciar(l);
 
     return 0;
 }
